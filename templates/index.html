@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doctor</title>
+    
+
+    <link rel="stylesheet" href="static\styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <div id="wrapper">
+     <div class="container">
+
+        <div class="navbar">
+                
+            <div class="logo-container">
+                <img src="static\logo.png" class="logo">
+                <div class="logo-text">We Care</div>
+            </div>
+            
+            <div class="nav-items">
+                <div><a href="/">We Care</a></div>
+                <div><a href="#form">Forms</a></div>
+                <div><a href="#contact">Contact Us</a></div>
+            </div>
+    
+        </div>
+     
+       <div class="blue-bar">hhhhh</div>
+    
+    
+
+            <div class="mainpart" id="bg">
+        
+                <div class="hero-section" id="Wecare">
+        
+                    <div class="hero-section-blank"></div>
+                    <div class="hero-section-desc">
+                            <div class="hero-section-intro">
+                                <h1 class="hero-section-heading"><b>Welcome </b>to We Care.<br>How can we help you?</h1>
+                       <div class="hero-section-sub-heading">To solve a difficult problem in medicine, don't study it directly, but rather pursue a curiosity about nature and the rest will follow. Do basic research.Wanna go study some anatomy?
+                        Emphysema puffs pink, chronic bronchitis makes you blue, but no COPD makes me as breathless as you.</div>
+                            </div>
+                            
+                        <div class="form-section" id="form">
+                
+                          <div class="login-box">
+                            <h2 id="fill">Fill your details here!</h2>
+                            <form id="form" action="{{ url_for('predict')}}"method="post">
+                              <div class="user-box">
+                                <input type="text" name="username" required="required">
+                                <label>Doctors Name</label>
+                              </div>
+                              <div class="user-box">
+                                <input type="speciality" name="speciality" required="required">
+                                <label>Doctor Speciality</label>
+                              </div>
+                              <div class="user-box">
+                                <input type="city" name="city" required="required">
+                                <label>City</label>
+                              </div>
+                              <div class="user-box">
+                                <input type="experience" name="experience" required="required">
+                                <label>Experience</label>
+                              </div>
+                              <div class="user-box">
+                                <input type="rating" name="rating" required="required">
+                                <label>Rating</label>
+                              </div>
+                              <a href="">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <input type="submit" class="abc">
+                              </form> 
+                              
+  
+                              </a>
+                              <div id="ans">
+                            {{prediction_text}}
+                              </div>
+                              
+                             
+                              </a>
+                              
+                          </div> 
+                
+                        </div>
+                    </div>
+                        
+                       
+                </div>
+          </div>
+       
+
+        
+          <div class="orange-bar">hhhhh</div>
+ 
+
+      <div id="contact">
+        <div class="row">
+                <h1 class="contact-h1">Contact us</h1>
+        </div>
+        <div class="row">
+                <h4 class="contact-h4"style="text-align:center">We'd love to hear from you!</h4>
+        </div>
+        <div class="row input-container">
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <input type="text" required />
+                        <label>Name</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                        <input type="text" required />
+                        <label>Email</label> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                        <input type="text" required />
+                        <label>Phone Number</label> 
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea required></textarea>
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="btn-lrg submit-btn">Send Message</div>
+                </div>
+        </div>
+    </div>
+    
+       
+     </div>
+    </div>
+   
+</body>
+</html>
